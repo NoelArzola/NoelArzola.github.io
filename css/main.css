@@ -99,7 +99,7 @@ textarea {
    ========================================================================== */
 
 html {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -108,8 +108,12 @@ html {
   width: 95%;
 }
 
+h1 {
+  font-size: 1.5em;
+}
+
 h2 {
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 header {
@@ -117,17 +121,18 @@ header {
   padding-bottom: 5px;
 }
 
-.profile img {
+p {
+  font-size: 1.25em;
+}
+
+.profile-image {
   display: none;
 }
 
-.promo img {
-  padding-left: 25px;
-  margin-bottom: 20px;
+.portfolio-site-image {
+  width: 100%;
+  padding-bottom: 2em;
 }
-
-
-
 
 /* ==========================================================================
    Helper classes
@@ -221,55 +226,66 @@ header {
 @media only screen and (min-width: 768px) {
 
   .content-wrapper {
-    width: 85%;
+    width: 90%;
   }
 
   .profile {
     display: flex;
-  }
-  .profile img {
-    
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
   }
   
-  .promo img {
-    padding: 0 200px;
-    margin-bottom: 20px;
+  .profile img {
+    border: 1em inset darkblue;
+    display: block;
+    width: 25%;
+  }
+
+  .page-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+
+  .portfolio-site-image {
+    width: 105%;
+    padding-bottom: 135px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
+
   .content-wrapper {
     width: 1200px;
     margin: 0 auto;
   }
 
+  h1 {
+    font-size: 2em;
+  }
+
   .profile,
-.promo,
-.page-list {
-  width: 30%;
-}
+  .promo,
+  .page-list {
+    width: 30%;
+  }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
-}
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 
-.profile {
-  display: flex;
-  justify-content: center;
-}
+  .profile img {
+    width: 80%;
+  }
 
-.profile-image {
-  width: 250px;
-  padding-bottom: 130px;
-}
-
-.portfolio-site-image {
-  width: 350px;
-  padding-bottom: 135px;
-}
+  .portfolio-site-image {
+    width: 95%;
+    padding-bottom: 135px;
+  }
 
 }
 
